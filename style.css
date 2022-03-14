@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+/******************************************
+LAYOUT
+******************************************/
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 82rem;
+    height: 42rem;
+    display: flex;
+    padding: 8rem 7rem;
+}
+.content {
+    flex-basis: 50%;
+}
+
+/******************************************
+ADDITIONAL STYLES
+******************************************/
+main {
+    background: hsl(233, 47%, 7%);
+;
+}
+.text {
+    background: hsl(244, 38%, 16%);
+    padding: 3rem 4rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+}
+.text h1 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.text h1 span {
+    color: hsl(277, 64%, 61%);
+}
+.text p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.4;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.bottom > div {
+    display: flex;
+    flex-direction: column;
+}
+.small {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.6)
+}
+
+.image {
+    position: relative;
+    /*background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    box-shadow: inset 5rem 5rem 5rem 30rem rgba(120, 21, 182, 0.6)*/
+
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(168, 42, 247, 0.47);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.image img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+    color: red
+}
+.attribution a {
+    color: rgba(120, 21, 182);
+    text-decoration: none;
+}
+/******************************************
+STYLES FOR TABLET AND MOBILE VIEW
+******************************************/
+@media all and (max-width: 870px) {
+    main {
+        width: 70rem;
+        height: 40rem;
+        padding: 5rem 4rem;
+    }
+}
+@media all and (max-width: 750px) {
+    main {
+        width: 60rem;
+        height: 37rem;
+        padding: 4rem 3rem;
+    }
+}
+@media all and (max-width: 750px) {
+    main {
+        width: 47rem;
+        height: 30rem;
+        padding: 3rem 2rem;
+    }
+    .text {
+        padding: 2rem 3rem;
+        font-size: 1.2rem;
+    }
+    .text h1 {
+        margin-bottom: 1.7rem;
+        line-height: 1.1;
+    }
+    .text p {
+        font-size: 1rem;
+        line-height: 1.2;
+        font-size: 0.9rem;
+    }
+    .bottom {
+        margin-top: 3rem;
+    }
+    .small {
+        font-size: 0.9rem;
+    }
+}
+@media all and (max-width: 490px) {
+    body {
+        height: auto;
+        background: hsl(233, 47%, 7%);
+    }
+    main {
+        width: 90%;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .text {
+        flex-basis: 70%;
+        text-align: center;
+    }
+    .image {
+        flex-basis: 30%
+    }
+}
+ 
+@media all and (max-width: 380px) {
+    main {
+        font-size: 1.5rem;
+    }
+    .text h1 {
+        text-align: center;
+        line-height: 1.2;
+    }
+    .text p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .small {
+        font-size: 1rem;
+    }
+    .bottom {
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .bottom div {
+        margin-bottom: 1rem;
+    }
+}
